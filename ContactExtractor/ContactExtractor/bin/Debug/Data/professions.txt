@@ -1,0 +1,23 @@
+﻿adwokat
+analityk
+architekt
+audytor
+chirurg
+doradca podatkowy
+elektryk
+farmaceuta
+geodeta
+grafik
+hurtownia
+inżynier
+kosmetolog
+księgowy
+lekarz
+notariusz
+rewident
+stomatolog
+pielęgniarka
+programista
+protetykt
+weterynarz
+zarządca nieruchomości

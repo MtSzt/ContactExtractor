@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ContactExtractor.Views.ContactView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ContactExtractor.Views" Background="White"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!---"-->
+        <DataGrid x:Name="ExtractedContent" SelectedItem="{Binding Path= FromWeb, Mode=TwoWay}" CanUserAddRows="False" AutoGenerateColumns="False" Grid.Row ="1" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Company/Profession" Binding="{Binding Path=Company}"  Width="*" FontSize="14"/>
+                <DataGridTextColumn Header="Phone Number" Binding="{Binding Path=PhoneNumber}" Width="*" FontSize="14"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}" Width="*" FontSize="14"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</UserControl>

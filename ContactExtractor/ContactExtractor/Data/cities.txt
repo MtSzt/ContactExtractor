@@ -1,0 +1,32 @@
+﻿Bielsko-Biała
+Bydgoszcz
+Bytom
+Częstochowa
+Dąbowa Górnicza
+Gdańsk
+Gdynia
+Glywice
+Gorzów Wielkopolski
+Katowice
+Kielce
+Kołobrzeg
+Koszalin
+Kraków
+Lublin
+Łódź
+Olsztyn
+Płock
+Police
+Poznań
+Ruda Śląska
+Rybnik
+Rzeszów
+Sopot
+Stargard
+Szczecin
+Toruń
+Tychy
+Warszawa
+Wrocław
+Zabrze
+Zielona Góra
