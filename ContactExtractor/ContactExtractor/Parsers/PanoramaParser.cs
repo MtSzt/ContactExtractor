@@ -2,6 +2,7 @@
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,12 @@ namespace ContactExtractor.Parsers
 {
     public class PanoramaParser
     {
+        private readonly string _convertedNumbers = Environment.CurrentDirectory + ".\\Data\\convertedNumbers.txt";
+        
         public List<WebSiteModel> ExtractData(string websiteContent) 
         {
+            List<string> listOfNumbers = File.ReadAllLines(_convertedNumbers).ToList();
+
             List<WebSiteModel> outputList = new List<WebSiteModel>();
 
             var htmlDoc = new HtmlDocument();
@@ -38,6 +43,10 @@ namespace ContactExtractor.Parsers
                 {
                     //company Phone
                     companyDetails.PhoneNumber = nodes.Descendants("a").Where(node => node.GetAttributeValue("class", String.Empty).Contains("icon-telephone  addax addax-cs_hl_phonenumber_click"))?.FirstOrDefault().Attributes["title"].Value;
+                    if (listOfNumbers.Contains(companyDetails.PhoneNumber))
+                    {
+                        companyDetails.PhoneNumber = "CONVERTED";
+                    }
                 }
                 catch (Exception)
                 {

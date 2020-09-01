@@ -61,7 +61,6 @@ C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\nunit.framework.pdb
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\nunit.framework.xml
-C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.csprojAssemblyReference.cache
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\Views\ContactView.g.cs
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\Views\ShellView.g.cs
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\App.g.cs
@@ -79,3 +78,5 @@ C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.csproj.CopyComplete
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.exe
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.pdb
+C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\Data\convertedNumbers.txt
+C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.csprojAssemblyReference.cache

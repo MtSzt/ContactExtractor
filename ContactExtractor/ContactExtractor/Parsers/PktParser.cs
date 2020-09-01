@@ -5,13 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ContactExtractor.Parsers
 {
     public class PktParser
     {
+        private readonly string _convertedNumbers = Environment.CurrentDirectory + ".\\Data\\convertedNumbers.txt";
         public List<WebSiteModel> ExtractData(string websiteContent)
         {
+            List<string> listOfNumbers = File.ReadAllLines(_convertedNumbers).ToList();
+
             List<WebSiteModel> outputList = new List<WebSiteModel>();
 
             var htmlDoc = new HtmlDocument();
@@ -36,6 +40,10 @@ namespace ContactExtractor.Parsers
                 {
                     //company Phone
                     companyDetails.PhoneNumber = nodes.Descendants("a").Where(node => node.GetAttributeValue("href", String.Empty).Equals("javascript:;"))?.FirstOrDefault().Attributes["data-phone"].Value;
+                    if (listOfNumbers.Contains(companyDetails.PhoneNumber))
+                    {
+                        companyDetails.PhoneNumber = "CONVERTED";
+                    }
                 }
                 catch (Exception)
                 {

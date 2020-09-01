@@ -32,6 +32,7 @@
             <MenuItem Header="Edit">
                 <MenuItem x:Name="MenuJobEdit" Header="Edit Professions"/>
                 <MenuItem x:Name="MenuRegionEdit" Header="Edit Cities"/>
+                <MenuItem x:Name="MenuNumberEdit" Header="Edit Converted Numbers"/>
             </MenuItem>
 
         </Menu>
