@@ -124,6 +124,11 @@ namespace ContactExtractor.ViewModels
             Process.Start("notepad.exe", _convertedNumbers);
         }
 
+        public void MenuNotInterested() 
+        {
+            Process.Start("notepad.exe", _notInterested);
+        }
+
         #endregion
 
         #region ---MenuButtons---
@@ -191,5 +196,6 @@ namespace ContactExtractor.ViewModels
         private readonly string _fileWithCities = Environment.CurrentDirectory + ".\\Data\\cities.txt";
         private readonly string _fileWithJobs = Environment.CurrentDirectory + ".\\Data\\professions.txt";
         private readonly string _convertedNumbers = Environment.CurrentDirectory + ".\\Data\\convertedNumbers.txt";
+        private readonly string _notInterested = Environment.CurrentDirectory + ".\\Data\\notInterested.txt";
     }
 }

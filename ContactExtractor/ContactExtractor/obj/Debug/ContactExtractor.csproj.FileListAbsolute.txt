@@ -80,3 +80,4 @@ C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.pdb
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\Data\convertedNumbers.txt
 C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\obj\Debug\ContactExtractor.csprojAssemblyReference.cache
+C:\Users\Mateusz\Documents\GitHub\WebSrapping\ContactExtractor\ContactExtractor\ContactExtractor\bin\Debug\Data\notInterested.txt

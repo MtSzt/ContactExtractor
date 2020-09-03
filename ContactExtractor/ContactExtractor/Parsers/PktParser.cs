@@ -12,9 +12,13 @@ namespace ContactExtractor.Parsers
     public class PktParser
     {
         private readonly string _convertedNumbers = Environment.CurrentDirectory + ".\\Data\\convertedNumbers.txt";
+
+        private readonly string _notInterested = Environment.CurrentDirectory + ".\\Data\\notInterested.txt";
         public List<WebSiteModel> ExtractData(string websiteContent)
         {
             List<string> listOfNumbers = File.ReadAllLines(_convertedNumbers).ToList();
+
+            List<string> listOfNotInterested = File.ReadAllLines(_notInterested).ToList();
 
             List<WebSiteModel> outputList = new List<WebSiteModel>();
 
@@ -41,9 +45,10 @@ namespace ContactExtractor.Parsers
                     //company Phone
                     companyDetails.PhoneNumber = nodes.Descendants("a").Where(node => node.GetAttributeValue("href", String.Empty).Equals("javascript:;"))?.FirstOrDefault().Attributes["data-phone"].Value;
                     if (listOfNumbers.Contains(companyDetails.PhoneNumber))
-                    {
                         companyDetails.PhoneNumber = "CONVERTED";
-                    }
+
+                    if (listOfNotInterested.Contains(companyDetails.PhoneNumber))
+                        companyDetails.PhoneNumber = "NOT INTERESTED";
                 }
                 catch (Exception)
                 {

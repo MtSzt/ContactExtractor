@@ -12,10 +12,14 @@ namespace ContactExtractor.Parsers
     public class PanoramaParser
     {
         private readonly string _convertedNumbers = Environment.CurrentDirectory + ".\\Data\\convertedNumbers.txt";
-        
+
+        private readonly string _notInterested = Environment.CurrentDirectory + ".\\Data\\notInterested.txt";
+
         public List<WebSiteModel> ExtractData(string websiteContent) 
         {
             List<string> listOfNumbers = File.ReadAllLines(_convertedNumbers).ToList();
+
+            List<string> listOfNotInterested = File.ReadAllLines(_notInterested).ToList();
 
             List<WebSiteModel> outputList = new List<WebSiteModel>();
 
@@ -44,9 +48,10 @@ namespace ContactExtractor.Parsers
                     //company Phone
                     companyDetails.PhoneNumber = nodes.Descendants("a").Where(node => node.GetAttributeValue("class", String.Empty).Contains("icon-telephone  addax addax-cs_hl_phonenumber_click"))?.FirstOrDefault().Attributes["title"].Value;
                     if (listOfNumbers.Contains(companyDetails.PhoneNumber))
-                    {
                         companyDetails.PhoneNumber = "CONVERTED";
-                    }
+
+                    if (listOfNotInterested.Contains(companyDetails.PhoneNumber))
+                        companyDetails.PhoneNumber = "NOT INTERESTED";
                 }
                 catch (Exception)
                 {
